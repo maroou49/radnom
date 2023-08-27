@@ -1,5 +1,8 @@
     var img = new Image();
     img.src = 'https://qoivowun9nw5ocj9c1q8mx5qghm8a2yr.oastify.com';
     img.onload = () => {
-        alert(img.src);
+        var tempDiv = document.createElement('div');
+        tempDiv.innerHTML = img.src;
+        var loadedHTML = tempDiv.textContent || tempDiv.innerText;
+        alert(loadedHTML);
     };
