@@ -1,6 +1,5 @@
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://qoivowun9nw5ocj9c1q8mx5qghm8a2yr.oastify.com', true);
-    xhr.onload = function() {
-        alert(xhr.responseText);
+    var img = new Image();
+    img.src = 'https://qoivowun9nw5ocj9c1q8mx5qghm8a2yr.oastify.com';
+    img.onload = () => {
+        alert(img.src);
     };
-    xhr.send();
