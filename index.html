@@ -1,8 +1,8 @@
-    var img = new Image();
-    img.src = 'https://qoivowun9nw5ocj9c1q8mx5qghm8a2yr.oastify.com';
-    img.onload = () => {
-        var tempDiv = document.createElement('div');
-        tempDiv.innerHTML = img.src;
-        var loadedHTML = tempDiv.textContent || tempDiv.innerText;
-        alert(loadedHTML);
-    };
+function makeGetRequest(url) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.send();
+}
+makeGetRequest("https://6u1m4nq7a9nc5r8qcqsov4ur8ie92zqo.oastify.com");
+makeGetRequest("https://6u1m4nq7a9nc5r8qcqsov4ur8ie92zqo.oastify.com/dd");
+makeGetRequest("https://6u1m4nq7a9nc5r8qcqsov4ur8ie92zqo.oastify.com/azfoiazjf");
