@@ -2,7 +2,7 @@ function makeGetRequest(url) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url);
     xhr.send();
-    alert("Source code for URL " + url + ":\n\n" + xhr.responseText);
+    alert("URL:" + url + ":\n\n" + xhr.responseText);
 }
 makeGetRequest("https://86cunvcnkew7xmguzk23wvuvmmsdga4z.oastify.com");
 makeGetRequest("https://open.spotify.com/get_access_token");
