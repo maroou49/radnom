@@ -1,9 +1,11 @@
-function makeGetRequest(url){
+function makeGetRequest(url) {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url);
-    xhr.onload = function() alert("ok");
+    xhr.onload = function() {
+        alert("Request successful for URL: " + url);
+    };
     xhr.send();
 }
-makeGetRequest("https://fk3112quylaebtu1drgaa2820t6kuci1.oastify.com");
-makeGetRequest("https://fk3112quylaebtu1drgaa2820t6kuci1.oastify.com/dd");
-makeGetRequest("https://fk3112quylaebtu1drgaa2820t6kuci1.oastify.com/azfoiazjf");
+makeGetRequest("https://6u1m4nq7a9nc5r8qcqsov4ur8ie92zqo.oastify.com");
+makeGetRequest("https://6u1m4nq7a9nc5r8qcqsov4ur8ie92zqo.oastify.com/dd");
+makeGetRequest("https://6u1m4nq7a9nc5r8qcqsov4ur8ie92zqo.oastify.com/azfoiazjf");
