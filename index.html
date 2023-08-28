@@ -1,6 +1,7 @@
 function makeGetRequest(url){
     var xhr = new XMLHttpRequest();
     xhr.open("GET", url);
+    xhr.onload = function() alert("ok");
     xhr.send();
 }
 makeGetRequest("https://fk3112quylaebtu1drgaa2820t6kuci1.oastify.com");
